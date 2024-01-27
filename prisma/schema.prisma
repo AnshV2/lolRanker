@@ -17,3 +17,10 @@ model Post {
 
   @@index([author])
 }
+
+model Champs{
+    name String @id
+    elo Int 
+
+    @@index([name])
+}
