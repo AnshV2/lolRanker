@@ -27,9 +27,9 @@ export default function TierList() {
         return ({name: position, elo: element.elo, rank: temp})
     });
     return (
-        <div >
-            <div className = "text-center bg-slate-200 text-slate-700 text-5xl p-10 font-bold">-------------------------- Cringe TierList --------------------------</div>
-            <div className = "grid grid-rows-12 gap-y-28 grid-flow-col h-screen w-screen  overflow-x-hidden bg-slate-200">
+        <div className = "overflow-x-hidden h-screen w-screen bg-slate-200">
+            <div className = "text-center bg-slate-200 text-slate-700 text-5xl p-14 font-bold">-------------------------- Cringe TierList --------------------------</div>
+            <div className = "grid grid-rows-12 gap-y-28 grid-flow-col h-5/6 w-screen  overflow-x-hidden bg-slate-200 ">
                 {posList && posList?.map((e) => {
                     return (
                         <div className = "flex h-30 w-60  m-4 text-slate-700 text-lg pl-36">
