@@ -26,6 +26,18 @@ export const postRouter = createTRPCRouter({
       }
     }),
 
+    getTierList: publicProcedure
+    .query(async ({ ctx }) => {
+      var list = await ctx.db.champs.findMany({
+        orderBy: [
+          {
+            elo: 'desc',
+          },
+        ],
+      })
+      return list;
+    }),
+
   getLatest: publicProcedure.query(({ ctx }) => {
     return ctx.db.post.findFirst({
       orderBy: { createdAt: "desc" },

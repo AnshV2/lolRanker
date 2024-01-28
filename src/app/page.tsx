@@ -20,16 +20,16 @@ const numChamps = 36;
 export default function Home() {
   noStore();
   const [player, upPlayer] = useState(Math.floor(Math.random() * numChamps))
-  const {data} = api.post.getOpponent.useQuery({text: champsImg[player] ?? ""})
+  const opponent = api.post.getOpponent.useQuery({text: champsImg[player] ?? ""})
 
   return (
     <div className = "flex h-screen w-screen bg-slate-200 items-center justify-center">
-      {data && <div className = "flex w-full h-2/3 items-center justify-center">
+      {opponent.data && <div className = "flex w-full h-2/3 items-center justify-center">
         <div className = "relative h-1/2 w-1/3 l-1/9 justify-center items-center  ">
           <img className = "w-full h-full object-contain" src = {"/Brawlers/" + champsImg[player] + ".jpg"}></img>
         </div>
         <div className = "h-1/2 w-1/3 r-1/9 justify-center items-center   ">
-          <img className = "w-full h-full object-contain" src = {"/Brawlers/" + champsImg[data] + ".jpg"}></img>
+          <img className = "w-full h-full object-contain" src = {"/Brawlers/" + champsImg[opponent.data] + ".jpg"}></img>
         </div>
       </div>}
     </div>
