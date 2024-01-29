@@ -15,11 +15,11 @@ const numChamps = 36;
 
 
 export default function TierList() {
-    var list = api.post.getTierList.useQuery()
-    var temp = 0;
+    let list = api.post.getTierList.useQuery()
+    let temp = 0;
     const posList = list.data?.map(element => {
-        var position = 0;
-        for (var i = 0; i < champsDB.length; i++) {
+        let position = 0;
+        for (let i = 0; i < champsDB.length; i++) {
             if (champsDB[i] === element.name) {position = i}
         }
         console.log(position)
