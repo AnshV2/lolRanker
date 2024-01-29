@@ -47,14 +47,14 @@ export default function Home() {
             mutate({text: champsDB[player] ?? "", elo: newWinnerEloPlayer})
             mutate({text: champsDB[opponent.data?? 1] ?? "", elo: newLoserEloOpponent})
             upPlayer(Math.floor(Math.random() * numChamps))
-          }} className = "w-full h-full object-contain border-2 border-r-slate-400" src = {"/Brawlers/" + champsImg[player] + ".jpg"}></img>
+          }} className = "w-full h-full object-contain border-2  hover:border-slate-400" src = {"/Brawlers/" + champsImg[player] + ".jpg"}></img>
         </div>
         <div className = "h-1/2 w-1/3 r-1/9 justify-center items-center   ">
           <img onClick={() => {
             mutate({text: champsDB[opponent.data?? 1] ?? "", elo: newWinnerEloOpponent})
             mutate({text: champsDB[player] ?? "", elo: newLoserEloPlayer})
             upPlayer(Math.floor(Math.random() * numChamps))
-          }} className = "w-full h-full object-contain border-2 border-l-slate-400" src = {"/Brawlers/" + champsImg[opponent.data] + ".jpg"}></img>
+          }} className = "w-full h-full object-contain border-2  hover:border-slate-400" src = {"/Brawlers/" + champsImg[opponent.data] + ".jpg"}></img>
         </div>
       </div>}
       <Link href = "/tierList"><div className = "text-cente text-slate-700 text-2xl font-bold"> Global Tierlist </div></Link>
