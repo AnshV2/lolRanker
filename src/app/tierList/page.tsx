@@ -15,7 +15,7 @@ const numChamps = 36;
 
 
 export default function TierList() {
-    let list = api.post.getTierList.useQuery()
+    const list = api.post.getTierList.useQuery()
     let temp = 0;
     const posList = list.data?.map(element => {
         let position = 0;

@@ -19,7 +19,7 @@ export const postRouter = createTRPCRouter({
       }
       list = list.map((e) => {return ({name:e.name, elo: Math.abs(e.elo - temp)})})
       list.sort((e: {name:string, elo:number}, e2: {name:string, elo:number}) => {return (e.elo - e2.elo)});
-      let rand = Math.floor(Math.random() * 5) + 1
+      const rand = Math.floor(Math.random() * 5) + 1
       let answer = list[rand]?.name ?? ""
       while (answer === input.text) {answer = list[Math.floor(Math.random() * 5) + 1]?.name ?? ""}
       for (let i = 0; i < champsDB.length; i++) {
@@ -29,7 +29,7 @@ export const postRouter = createTRPCRouter({
 
     getTierList: publicProcedure
     .query(async ({ ctx }) => {
-      let list = await ctx.db.champs.findMany({
+      const list = await ctx.db.champs.findMany({
         orderBy: [
           {
             elo: 'desc',
@@ -42,7 +42,7 @@ export const postRouter = createTRPCRouter({
     getElo: publicProcedure
     .input(z.object({ text: z.string() }))
     .query(async ({ ctx, input }) => {
-      let player = await ctx.db.champs.findMany({
+      const player = await ctx.db.champs.findMany({
         where: {name: {equals: input.text}}
       })
       return player[0]?.elo
