@@ -1,4 +1,4 @@
-# TwitterV2
+# BrawlRanker
 
 Link to Deployed App: https://lol-ranker.vercel.app/
 
