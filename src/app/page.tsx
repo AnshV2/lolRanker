@@ -7,7 +7,7 @@ import Link from "next/link";
 import { api } from "~/trpc/react";
 import {useState, useEffect} from "react"
 
-let Elo = require( 'elo-js' );
+const Elo = require( 'elo-js' );
 let elo = new Elo();
 
 const champsDB = ['Bowswer', 'Captain Falcon', 'Diddy Kong', 'Donkey Kong', 'Falco', 'Fox', 'Ganondorf', 'Ice Climbers', 'Ike', 'Jigglypuff', 'King Dedede', 'Kirby', 'Link', 'Lucario',
