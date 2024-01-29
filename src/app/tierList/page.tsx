@@ -32,7 +32,7 @@ export default function TierList() {
             <div className = "grid grid-rows-12 gap-y-28 grid-flow-col h-5/6 w-screen  overflow-x-hidden bg-slate-200 ">
                 {posList && posList?.map((e) => {
                     return (
-                        <div className = "flex h-30 w-60  m-4 text-slate-700 text-lg pl-36">
+                        <div className = "flex h-30 w-60  m-4 text-slate-700 text-lg pl-36" key = {e.name}>
                             <div className = "text-slate-950 text-4xl pr-6 pt-4 font-bold"> {e.rank} </div>
                             <img className = "h-20 w-20" src = {"/Brawlers/" + champsImg[e.name] + "Icon" + ".png"}></img>
                             <div className = 'pl-5'> Cringe Rating: {e.elo} </div>
