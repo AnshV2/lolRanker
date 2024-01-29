@@ -22,7 +22,10 @@ const config = {
     "@typescript-eslint/no-misused-promises": "off",
     "@typescript-eslint/no-unsafe-assignment": "off",
     "@typescript-eslint/no-unsafe-call": "off",
-    "@typescript-eslint/no-unsafe-member-access": "off"
+    "@typescript-eslint/no-unsafe-member-access": "off",
+    "@typescript-eslint/no-var-requires": "off", 
+    "@typescript-eslint/prefer-optional-chain": "off",
+    "@typescript-eslint/prefer-for-of": "off",
   },
 };
 
